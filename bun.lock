@@ -5,7 +5,6 @@
     "": {
       "name": "tornapi-typescript",
       "devDependencies": {
-        "@kwack-dev/tornapi": "^3.0.1",
         "@scalar/openapi-types": "^0.5.2",
         "@types/node": "^24.10.1",
         "prettier": "^3.7.4",
@@ -16,8 +15,6 @@
   },
   "packages": {
     "@babel/helper-validator-identifier": ["@babel/helper-validator-identifier@7.28.5", "", {}, "sha512-qSs4ifwzKJSV39ucNjsvc6WVHs6b7S03sOh2OcHF9UHfVPqWWALUsNUVzhSBiItjRZoLHx7nIarVjqKVusUZ1Q=="],
-
-    "@kwack-dev/tornapi": ["@kwack-dev/tornapi@3.0.1", "", { "dependencies": { "prettier": "^3.3.3" }, "peerDependencies": { "typescript": "^5.0.0" }, "bin": { "tornapi": "dist/bin.js" } }, "sha512-FU02csMyY96DWQfG5euOZSkTKQgCGW03Y1f4eZRw2nVEmHReQYRf7iI+RbkKDZjj6DzJOhGcs9FUDEzzNZLWxg=="],
 
     "@nodelib/fs.scandir": ["@nodelib/fs.scandir@2.1.5", "", { "dependencies": { "@nodelib/fs.stat": "2.0.5", "run-parallel": "^1.1.9" } }, "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="],
 
