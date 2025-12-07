@@ -14,7 +14,7 @@ async function generateErrorCodesEnum(): Promise<string> {
     const errors = await getErrorCodes();
 
     return [
-        "export enum TornApiError {",
+        "enum TornApiError {",
         ...errors.map(
             ({ code, message }) =>
                 `${message
@@ -78,12 +78,12 @@ async function generateSectionTypes(section: string): Promise<string> {
             if (structure.values) {
                 // Enum type
                 const enumValues = structure.values.map((v) => `"${v}"`).join(" | ");
-                types.push(`export type ${structTypeName} = ${enumValues};`);
+                types.push(`type ${structTypeName} = ${enumValues};`);
                 types.push(""); // Empty line after type
             } else if (structure.schema) {
                 // Interface type
                 const fields = generateFields(structure.schema, selection.structures, sectionName, generatedStructures);
-                const interfaceLines = [`export interface ${structTypeName} {`, ...fields.map((f) => `    ${f}`), `}`];
+                const interfaceLines = [`interface ${structTypeName} {`, ...fields.map((f) => `    ${f}`), `}`];
                 types.push(interfaceLines.join("\n"));
                 types.push(""); // Empty line after interface
             }
@@ -93,7 +93,7 @@ async function generateSectionTypes(section: string): Promise<string> {
         const responseTypeName = `${sectionName}V1${selectionName}Response`;
         const responseFields = generateFields(selection.schema, selection.structures, sectionName, generatedStructures);
 
-        const responseLines = [`export interface ${responseTypeName} {`, ...responseFields.map((f) => `    ${f}`), `}`];
+        const responseLines = [`interface ${responseTypeName} {`, ...responseFields.map((f) => `    ${f}`), `}`];
         types.push(responseLines.join("\n"));
         types.push(""); // Empty line after interface
     }

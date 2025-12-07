@@ -10,17 +10,12 @@ export async function generateV2Types() {
 
     const types = await writeTypes(specification);
 
-    const allCode =  await prettier.format(types, {
+    const allCode = await prettier.format(types, {
         parser: "typescript",
         tabWidth: 4,
     });
 
-    return [
-        "// Auto-generated TypeScript types for Torn API V2",
-        "// Generated from: https://www.torn.com/swagger/openapi.json",
-        "",
-        allCode,
-    ].join("\n");
+    return ["// Auto-generated TypeScript types for Torn API V2", "// Generated from: https://www.torn.com/swagger/openapi.json", "", allCode].join("\n");
 }
 
 async function writeTypes(specification: OpenAPIV3.Document): Promise<string> {
@@ -30,5 +25,5 @@ async function writeTypes(specification: OpenAPIV3.Document): Promise<string> {
 
     const { data } = await convert({ data: JSON.stringify(specification) });
 
-    return data.replaceAll("[key: string]: any;", "").replaceAll("& ({\n        \n    } | null)", "| null");
+    return data.replaceAll("[key: string]: any;", "").replaceAll("& ({\n        \n    } | null)", "| null").replaceAll("export ", "");
 }
