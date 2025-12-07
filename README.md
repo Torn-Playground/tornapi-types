@@ -1,7 +1,7 @@
 # TornAPI Types
 
-[![NPM Version](https://img.shields.io/npm/v/tornapi-types)](https://www.npmjs.com/package/tornapi-typescript)
-[![NPM Downloads](https://img.shields.io/npm/d18m/tornapi-types)](https://www.npmjs.com/package/tornapi-typescript)
+[![NPM Version](https://img.shields.io/npm/v/tornapi-types)](https://www.npmjs.com/package/tornapi-types)
+[![NPM Downloads](https://img.shields.io/npm/d18m/tornapi-types)](https://www.npmjs.com/package/tornapi-types)
 
 Automatically generated type definition in TypeScript for [torn.com](https://torn.com) API V1 and V2.
 
