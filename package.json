@@ -1,0 +1,20 @@
+{
+  "name": "tornapi-types",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "generate-types": "bun src/index.ts"
+  },
+  "devDependencies": {
+    "@scalar/openapi-types": "^0.5.2",
+    "@types/node": "^24.10.1",
+    "prettier": "^3.7.4",
+    "typeconv": "^2.3.1",
+    "typescript": "^5.9.3"
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "./dist/index.d.ts",
+    "./dist/openapi.json"
+  ]
+}
