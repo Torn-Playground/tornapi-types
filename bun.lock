@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "tornapi-typescript",
+      "name": "tornapi-types",
       "devDependencies": {
         "@scalar/openapi-types": "^0.5.2",
         "@types/node": "^24.10.1",
