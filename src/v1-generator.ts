@@ -140,6 +140,10 @@ function generateFields(schema: Record<string, any>, structures: Structure[], se
             key = `"${fieldName}"`;
         }
 
+        if (fieldSchema.optional) {
+            key += "?"
+        }
+
         const typeStr = generateTypeString(fieldSchema, structures, sectionName, generatedStructures);
         fields.push(`${key}: ${typeStr};`);
     }
