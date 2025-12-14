@@ -61,5 +61,5 @@ jobs:
           git push
         if: ${{ inputs.spec-version }}
 
-      - run: bun publish
+      - run: bunx npm publish --provenance
         if: ${{ inputs.publish-npm }}
