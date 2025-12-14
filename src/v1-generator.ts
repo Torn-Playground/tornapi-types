@@ -68,7 +68,7 @@ async function generateSectionTypes(section: string): Promise<string> {
 
         // Generate structure types first
         for (const structure of selection.structures) {
-            const structTypeName = `${sectionName}V1${sanitizeTypeName(structure.name)}`;
+            const structTypeName = `${sectionName}V1${sanitizeTypeName(structure.id)}`;
 
             if (generatedStructures.has(structTypeName)) {
                 continue;
@@ -164,7 +164,7 @@ function generateTypeString(fieldSchema: any, structures: Structure[], sectionNa
         if (!structure) {
             baseType = "unknown";
         } else {
-            const structTypeName = `${sectionName}V1${sanitizeTypeName(structure.name)}`;
+            const structTypeName = `${sectionName}V1${sanitizeTypeName(structure.id)}`;
 
             if (fieldSchema.structure.type === "enum" && structure.values) {
                 baseType = structure.values.map((v) => `"${v}"`).join(" | ");
