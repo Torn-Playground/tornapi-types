@@ -21,10 +21,6 @@ on:
         description: Publish to NPM
         default: true
 
-permissions:
-  id-token: write
-  contents: read
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -61,5 +57,7 @@ jobs:
           git push
         if: ${{ inputs.spec-version }}
 
-      - run: bunx npm publish --provenance
+      - run: bun publish
         if: ${{ inputs.publish-npm }}
+        env:
+          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
