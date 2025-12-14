@@ -141,7 +141,7 @@ function generateFields(schema: Record<string, any>, structures: Structure[], se
         }
 
         if (fieldSchema.optional) {
-            key += "?"
+            key += "?";
         }
 
         const typeStr = generateTypeString(fieldSchema, structures, sectionName, generatedStructures);
@@ -261,5 +261,8 @@ export async function generateV1Types() {
         "// ===== ERROR CODES =====",
         "",
         errorEnum,
+        "interface ErrorResponse {",
+        "error: { error:string; code: TornApiError; }",
+        "}",
     ].join("\n");
 }
