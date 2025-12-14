@@ -1,7 +1,7 @@
 {
   "name": "tornapi-types",
   "type": "module",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scripts": {
     "generate-types": "bun src/index.ts"
   },
