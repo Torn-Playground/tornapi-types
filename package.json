@@ -6,7 +6,7 @@
     "generate-types": "bun src/index.ts"
   },
   "devDependencies": {
-    "@scalar/openapi-types": "^0.5.4",
+    "@scalar/openapi-types": "^0.6.0",
     "@types/node": "^25.3.3",
     "prettier": "^3.8.1",
     "typeconv": "^2.3.1",
