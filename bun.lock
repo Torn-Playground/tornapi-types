@@ -5,7 +5,7 @@
     "": {
       "name": "tornapi-types",
       "devDependencies": {
-        "@scalar/openapi-types": "^0.9.3",
+        "@scalar/openapi-types": "^0.9.4",
         "@types/node": "^26.1.2",
         "prettier": "^3.9.6",
         "typeconv": "^2.3.1",
@@ -22,7 +22,7 @@
 
     "@nodelib/fs.walk": ["@nodelib/fs.walk@1.2.8", "", { "dependencies": { "@nodelib/fs.scandir": "2.1.5", "fastq": "^1.6.0" } }, "sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg=="],
 
-    "@scalar/openapi-types": ["@scalar/openapi-types@0.9.3", "", {}, "sha512-34qglt5jSo55iZfH9i7EhjQCdE0Po2xZeh8wytQKolSnXrxsYMSyFDJEBxz1Gaew4on9N3XIWsd0QpwKVA5CSA=="],
+    "@scalar/openapi-types": ["@scalar/openapi-types@0.9.4", "", {}, "sha512-eUSIjZEBLEF2i2pvcNdzXhzlKx6qt+hZsNklLmCyzPBoXWxHcQaEClgMFavXDRRvJDdi6LkyjqGUqqf0XgRgFg=="],
 
     "@types/bintrees": ["@types/bintrees@1.0.6", "", {}, "sha512-pZWT4Bz+tWwxlDspSjdoIza4PE5lbGI4Xvs3FZV/2v5m5SDA8LwNpU8AXxlndmARO7OaQ1Vf3zFenOsNMzaRkQ=="],
 
